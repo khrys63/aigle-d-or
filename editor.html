@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Aigle d'Or - Éditeur de château</title>
+  </head>
+  <body>
+    <header id="toolbar">
+      <span class="brand">L'AIGLE D'OR <em>éditeur</em></span>
+      <button id="btn-new" type="button">Nouveau</button>
+      <button id="btn-original" type="button">Château livré</button>
+      <button id="btn-open" type="button">Ouvrir…</button>
+      <button id="btn-export" type="button">Exporter .json</button>
+      <span class="spacer"></span>
+      <span id="counts" class="counts"></span>
+    </header>
+
+    <main>
+      <section id="pane-plan">
+        <h2>
+          Plan
+          <span class="level">
+            <button id="level-down" type="button" title="Niveau inférieur">▼</button>
+            <span id="level-label"></span>
+            <button id="level-up" type="button" title="Niveau supérieur">▲</button>
+          </span>
+        </h2>
+        <canvas id="plan"></canvas>
+        <p class="hint">
+          Clic : choisir une salle · Glisser d'une salle vers une case voisine : percer un
+          passage (case vide = nouvelle salle)
+        </p>
+        <div id="offplan" class="offplan"></div>
+      </section>
+
+      <section id="pane-room">
+        <h2>Salle <span id="room-title"></span></h2>
+        <div id="palette"></div>
+        <canvas id="room"></canvas>
+        <p class="hint">Le fond de la salle est en haut, la caméra en bas (rangée 0).</p>
+      </section>
+
+      <section id="pane-inspector">
+        <h2>Propriétés</h2>
+        <div id="inspector"></div>
+      </section>
+    </main>
+
+    <footer id="pane-checks">
+      <h2>Contrôles</h2>
+      <ul id="checks"></ul>
+    </footer>
+
+    <script type="module" src="/src/editor/main.ts"></script>
+  </body>
+</html>

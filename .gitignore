@@ -1,0 +1,14 @@
+node_modules
+dist
+*.local
+.DS_Store
+PROMPTS-HISTORIQUE.md
+ARTICLE-LINKEDIN.md
+
+# Documentation de travail issue du jeu d'origine (captures, plans, solutions) :
+# elle sert à comprendre, jamais à être redistribuée. Voir NOTICE.
+/asset_legacy
+
+# Châteaux au format JSON, dont le plan reconstruit de L'Aigle d'Or : le plan de
+# 1984 est l'œuvre de son auteur, il ne se distribue pas depuis ce dépôt.
+/chateaux

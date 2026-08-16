@@ -1,0 +1,280 @@
+/* Éditeur de château : chrome sombre comme le jeu, plan sur parchemin comme la carte. */
+
+:root {
+  --bg: #14101c;
+  --panel: #1d1828;
+  --edge: #322a44;
+  --ink: #f0e8ff;
+  --dim: #9a8fb0;
+  --gold: #ffd24a;
+  --err: #e0405a;
+  --warn: #ffaa33;
+  --paper: #e8dcae;
+  --paper-ink: #3a2a18;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: var(--bg);
+  color: var(--ink);
+  font: 13px/1.5 ui-monospace, monospace;
+}
+
+/* ── Barre d'outils ─────────────────────────────────────────────────────── */
+
+#toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--edge);
+}
+
+.brand {
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-right: 8px;
+}
+
+.brand em {
+  color: var(--dim);
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.counts {
+  color: var(--dim);
+}
+
+.counts .err {
+  color: var(--err);
+}
+
+.counts .warn {
+  color: var(--warn);
+}
+
+button,
+select,
+input {
+  font: inherit;
+  color: var(--ink);
+  background: #262034;
+  border: 1px solid var(--edge);
+  border-radius: 3px;
+  padding: 4px 9px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--gold);
+}
+
+button[disabled] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+button[disabled]:hover {
+  border-color: var(--edge);
+}
+
+button.on {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #201a10;
+}
+
+/* ── Colonnes ───────────────────────────────────────────────────────────── */
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr) 320px;
+  min-height: 0;
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 10px 12px;
+  overflow: auto;
+  border-right: 1px solid var(--edge);
+}
+
+main > section:last-child {
+  border-right: 0;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.level button {
+  padding: 1px 7px;
+}
+
+canvas {
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--edge);
+  border-radius: 3px;
+}
+
+#room {
+  background: #0f0b16;
+}
+
+.hint {
+  margin: 8px 0 0;
+  color: var(--dim);
+  font-size: 11px;
+}
+
+/* Salles absentes du plan (les oubliettes) : le seul moyen de les sélectionner. */
+.offplan {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.offplan button {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+/* ── Palette d'outils ───────────────────────────────────────────────────── */
+
+#palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+#palette button {
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+/* ── Inspecteur ─────────────────────────────────────────────────────────── */
+
+#inspector .group {
+  margin-bottom: 14px;
+}
+
+#inspector .group > h3 {
+  margin: 0 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: normal;
+}
+
+#inspector label {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+#inspector label > span {
+  color: var(--dim);
+}
+
+#inspector input[type="checkbox"] {
+  justify-self: start;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+}
+
+#inspector .empty {
+  color: var(--dim);
+}
+
+#inspector .row-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* ── Contrôles (validateur) ─────────────────────────────────────────────── */
+
+#pane-checks {
+  max-height: 26vh;
+  overflow: auto;
+  padding: 10px 12px;
+  background: var(--panel);
+  border-top: 1px solid var(--edge);
+}
+
+#checks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#checks li {
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+#checks li:hover {
+  color: var(--gold);
+}
+
+#checks .tag {
+  display: inline-block;
+  width: 5.5em;
+  color: var(--err);
+}
+
+#checks .warn .tag {
+  color: var(--warn);
+}
+
+#checks .where {
+  color: var(--dim);
+}
+
+#checks .ok {
+  color: var(--dim);
+  cursor: default;
+}

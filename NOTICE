@@ -1,0 +1,72 @@
+Required Notice: Copyright (c) 2026 - projet « L'Aigle d'Or - Remake » (hommage non commercial)
+
+================================================================================
+ŒUVRE ORIGINALE
+================================================================================
+
+« L'Aigle d'Or » est une œuvre originale de Louis-Marie Rocques, publiée par
+Loriciels (1984 sur Oric, 1985 sur Thomson MO5 et Amstrad CPC).
+
+Le jeu d'origine - son nom, son univers, son scénario, le plan de son château et
+l'ensemble de ses éléments - reste la propriété de son auteur et de ses ayants
+droit. Ce projet n'est ni affilié, ni approuvé, ni soutenu par eux.
+
+« Abandonware » n'existe pas en droit : ni la disparition de l'éditeur, ni
+l'arrêt de la commercialisation, ni l'âge du jeu ne le font tomber dans le
+domaine public. Cet hommage existe donc par tolérance, pas par droit acquis.
+
+================================================================================
+NATURE DE CE PROJET
+================================================================================
+
+Ce dépôt est un hommage à l'un des tout premiers jeux d'aventure en « 3D » de
+l'histoire du jeu vidéo. C'est une reconstruction fondée sur l'idée et sur les
+mécaniques du jeu - lesquelles ne sont pas protégeables - entièrement réécrite à
+partir de zéro.
+
+CE QUI EST DANS CE DÉPÔT
+
+  - Un moteur, un format de château et un éditeur, écrits intégralement pour ce
+    projet. Aucun code, graphisme, son ou donnée n'a été extrait du produit
+    d'origine ; tout le rendu est vectoriel et procédural.
+
+  - Un château original, « le donjon de Ronceval » (src/world/ronceval.ts), écrit
+    pour ce dépôt. Il n'emprunte rien au plan de 1984.
+
+  - Des textes d'écran (titre, victoire, écrits trouvés en jeu) rédigés pour ce
+    projet. Aucune phrase du jeu d'origine n'y est reprise.
+
+CE QUI N'EST PAS DANS CE DÉPÔT
+
+  - Le plan du château de L'Aigle d'Or. L'agencement de ses salles, la position
+    de ses pièges et de ses objets sont l'œuvre de Louis-Marie Rocques, et non la
+    nôtre : ils ne sont pas distribués ici, sous aucune forme. Le jeu sait charger
+    un château depuis un fichier JSON (écran de sélection, touche 3) ; qui veut
+    rejouer celui de 1984 le reconstruit lui-même dans l'éditeur.
+
+  - Aucune capture d'écran, aucun document ni aucune ressource issus du jeu
+    d'origine.
+
+Aucune commercialisation de ce projet ou de ses dérivés n'est autorisée. Il est
+diffusé gratuitement, à but non lucratif, éducatif et patrimonial.
+
+================================================================================
+PORTÉE DE LA LICENCE
+================================================================================
+
+Le code de ce dépôt est publié sous la PolyForm Noncommercial License 1.0.0 (voir
+le fichier LICENSE), qui interdit tout usage commercial.
+
+Cette licence ne porte que sur notre propre travail. Elle ne confère aucun droit
+sur « L'Aigle d'Or », sur son titre, ni sur quoi que ce soit qui appartienne à son
+auteur ou à ses ayants droit - nous ne pouvons pas concéder ce que nous ne
+détenons pas.
+
+================================================================================
+RETRAIT
+================================================================================
+
+Si vous êtes l'auteur ou un ayant droit et souhaitez une modification ou le
+retrait de tout ou partie de ce projet, ouvrez une issue sur le dépôt GitHub
+(onglet « Issues ») : il sera donné suite immédiatement, sans discussion et sans
+condition.
