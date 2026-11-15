@@ -2,9 +2,9 @@
 
 Mode d'emploi de `dist/editor.html`.
 
-Le château du jeu s'écrit à la main dans `src/world/ronceval.ts` : 13 salles de TypeScript
-déclaratif, au format que définit `src/world/rooms.ts`. L'éditeur fait la même chose à la
-souris et produit un fichier `.json` que le jeu sait charger, **sans rien recompiler**. Le
+Un château peut s'écrire à la main, comme le donjon de Ronceval dans
+`src/world/ronceval.ts` : 13 salles de TypeScript déclaratif, au format que définit
+`src/world/rooms.ts`. L'éditeur fait la même chose à la souris et produit un fichier `.json` que le jeu sait charger, **sans rien recompiler**. Le
 format, lui, est celui que documente le [README](README.md) - l'éditeur ne l'invente pas,
 il l'importe.
 
@@ -12,15 +12,15 @@ il l'importe.
 > `DoorDef`, les objets, les pièges…), voir le [README](README.md#une-salle-roomdef).
 
 > [!CAUTION]
-> **SPOILER ALERT.** L'éditeur **ouvre sur le château livré**, le donjon de Ronceval : son
-> plan entier s'affiche d'emblée - les 13 salles, leurs niveaux, leurs passages - et un
+> **SPOILER ALERT.** L'éditeur **ouvre sur le château du jeu**, celui de L'Aigle d'Or : son
+> plan entier s'affiche d'emblée - les 65 salles, leurs niveaux, leurs passages - et un
 > clic suffit à voir ce que chacune contient. Or, en jeu, la carte est un **objet à
 > trouver**, et le reste se découvre sur place : c'est la première des deux règles que
 > s'est fixées ce projet (voir le [README](README.md#pourquoi-ce-projet)).
 >
 > Si vous comptez y jouer, **jouez d'abord**. Pour bâtir votre propre château sans rien
 > apprendre de celui-là, ouvrez l'éditeur et cliquez **« Nouveau »** tout de suite : vous
-> repartez d'une salle vide, et Ronceval reste entier.
+> repartez d'une salle vide, et le château reste entier.
 
 ---
 
@@ -35,19 +35,19 @@ npm run dev:editor      # ou en mode dev, si vous retouchez l'éditeur lui-même
 il s'ouvre en `file://`. Il n'est **pas** soumis à la contrainte de taille du jeu - le jeu
 doit tenir dans les 128 ko d'un TO9, pas l'outil qui sert à le bâtir.
 
-Au lancement, il ouvre le **château livré**. Trois portes d'entrée dans la barre du
+Au lancement, il ouvre le **château du jeu**. Quatre portes d'entrée dans la barre du
 haut :
 
 | Bouton | Effet |
 | --- | --- |
 | **Nouveau** | Un château minimal mais jouable : une salle `entree` avec sa porte principale, et son oubliette. |
-| **Château livré** | Recharge les 13 salles du donjon de Ronceval, pour les remanier. |
+| **L'Aigle d'Or** | Recharge les 65 salles du château du jeu (`src/world/aigle-dor.json`). |
+| **Ronceval** | Charge les 13 salles du donjon de Ronceval, le château d'exemple, pour les remanier. |
 | **Ouvrir…** | Reprend un `.json` exporté précédemment. |
 
-> Le château de *L'Aigle d'Or* (1984) **n'est pas fourni** : son plan est l'œuvre de
-> Louis-Marie Rocques, pas la nôtre (voir [`NOTICE`](NOTICE)). C'est précisément à cela
-> que sert cet éditeur : qui veut le rejouer le **rebâtit lui-même**, à partir de ses
-> propres notes, et le charge dans le jeu par la **touche 3**.
+> Le plan de *L'Aigle d'Or* (1984) est l'œuvre de Louis-Marie Rocques, diffusé ici avec
+> son accord (voir [`NOTICE`](NOTICE)). Pour le modifier, exportez-le puis remplacez
+> `src/world/aigle-dor.json` par le fichier obtenu.
 
 Un château modifié et non exporté déclenche un avertissement du navigateur si vous fermez
 l'onglet. Il n'y a **pas de sauvegarde automatique** : exportez.
@@ -58,7 +58,7 @@ l'onglet. Il n'y a **pas de sauvegarde automatique** : exportez.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│  Nouveau · Château livré · Ouvrir… · Exporter .json          ⛔ 0 ⚠ 0  │
+│  Nouveau · L'Aigle d'Or · Ronceval · Ouvrir… · Exporter .json ⛔ 0 ⚠ 0 │
 ├──────────────────┬───────────────────────────┬─────────────────────────┤
 │  PLAN            │  SALLE                    │  PROPRIÉTÉS             │
 │                  │  (palette d'outils)       │                         │
@@ -332,7 +332,7 @@ Chaque ligne est **cliquable** et sélectionne la salle et l'élément en cause.
 
 À l'export, s'il reste des erreurs, l'éditeur demande confirmation avant de partir.
 
-> Le **château livré ne produit ni erreur ni avertissement**. C'est l'étalon du
+> Le **donjon de Ronceval ne produit ni erreur ni avertissement**. C'est l'étalon du
 > validateur - la preuve que ces règles ne sont pas inventées après coup.
 
 ---

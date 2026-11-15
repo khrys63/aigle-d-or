@@ -1,0 +1,2909 @@
+{
+  "format": "aigle-dor-castle",
+  "version": 1,
+  "name": "chateau-origine",
+  "startRoom": "r14",
+  "startSpawn": {
+    "col": 8,
+    "row": 2
+  },
+  "oubliette": "oubliette",
+  "rooms": {
+    "oubliette": {
+      "name": "Oubliette",
+      "rows": 2,
+      "oubliette": true,
+      "skeletons": [
+        {
+          "col": 3,
+          "row": 1
+        }
+      ],
+      "ceilingExit": true,
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": []
+    },
+    "r14": {
+      "name": "Entree du chateau",
+      "doors": [
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "__exit__",
+          "spawn": {
+            "col": 8,
+            "row": 0
+          },
+          "exit": true
+        },
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r13",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r15",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        }
+      ],
+      "decors": [
+        {
+          "kind": "aigleNoir",
+          "col": 13
+        }
+      ]
+    },
+    "r13": {
+      "name": "Salle 13",
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r12",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r14",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "fireplaces": [
+        {
+          "id": "fp-r13",
+          "col": 8,
+          "row": 2,
+          "secret": true,
+          "target": "r71",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          }
+        }
+      ]
+    },
+    "r12": {
+      "name": "Salle 12",
+      "rows": 2,
+      "doors": [
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r13",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r22",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ]
+    },
+    "r15": {
+      "name": "Salle 15",
+      "rows": 2,
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r25",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r14",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "porteManteau",
+          "col": 13,
+          "row": 1
+        }
+      ]
+    },
+    "r1": {
+      "name": "Tour ronde 1",
+      "round": true,
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r11",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "stairs": "down"
+        }
+      ],
+      "chests": [
+        {
+          "id": "chest-r1",
+          "col": 2,
+          "row": 1,
+          "lock": "crowbar",
+          "content": {
+            "kind": "vial"
+          }
+        }
+      ]
+    },
+    "r11": {
+      "name": "Tour ronde 11",
+      "round": true,
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r1",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "lock": "crowbar",
+          "stairs": "up"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r21",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true
+        }
+      ],
+      "fireplaces": [
+        {
+          "id": "fp-r11",
+          "col": 8,
+          "row": 2
+        }
+      ]
+    },
+    "r16": {
+      "name": "Salle sombre 16",
+      "rows": 2,
+      "torches": [
+        {
+          "side": "left",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r17",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r26",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "chests": [
+        {
+          "id": "chest-purse-r16",
+          "col": 14,
+          "row": 1,
+          "lock": "crowbar",
+          "content": {
+            "kind": "purse"
+          }
+        }
+      ],
+      "bats": [
+        {
+          "col": 0,
+          "row": 0
+        }
+      ]
+    },
+    "r17": {
+      "name": "Tour ronde 17",
+      "round": true,
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r18",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true,
+          "stairs": "up"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r16",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "chaise",
+          "col": 10,
+          "row": 2
+        }
+      ]
+    },
+    "r18": {
+      "name": "Tour ronde 18",
+      "round": true,
+      "doors": [
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r17",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true,
+          "stairs": "down"
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r18",
+          "kind": "leadEagle",
+          "col": 4,
+          "row": 1
+        }
+      ],
+      "fireplaces": [
+        {
+          "id": "fp-r18",
+          "col": 8,
+          "row": 2,
+          "secret": true,
+          "target": "r42",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          }
+        }
+      ]
+    },
+    "r21": {
+      "name": "Couloir sombre 21",
+      "layout": [
+        "................"
+      ],
+      "torches": [
+        {
+          "side": "left",
+          "lit": false
+        },
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r11",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r31",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          }
+        }
+      ],
+      "traps": [
+        {
+          "col": 14,
+          "row": 0,
+          "marked": true
+        }
+      ]
+    },
+    "r22": {
+      "name": "Carrefour en T 22",
+      "layout": [
+        "................",
+        "######.....#####"
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r12",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r23",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r32",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          },
+          "grille": true
+        }
+      ],
+      "decors": [
+        {
+          "kind": "ecusson",
+          "col": 3
+        }
+      ]
+    },
+    "r23": {
+      "name": "Salle 23",
+      "rows": 2,
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r24",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r33",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r22",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "chaise",
+          "col": 13,
+          "row": 1
+        }
+      ]
+    },
+    "r24": {
+      "name": "Salle 24",
+      "rows": 2,
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r25",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r34",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r23",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "decors": [
+        {
+          "kind": "portrait",
+          "col": 13
+        }
+      ]
+    },
+    "r25": {
+      "name": "Salle 25",
+      "rows": 2,
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r35",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r24",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r15",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "table",
+          "col": 13,
+          "row": 1
+        }
+      ]
+    },
+    "r26": {
+      "name": "Salle sombre 26",
+      "rows": 2,
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r16",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r27",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "bats": [
+        {
+          "col": 0,
+          "row": 0
+        }
+      ]
+    },
+    "r27": {
+      "name": "Salle sombre 27",
+      "rows": 2,
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r37",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          }
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r26",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        }
+      ],
+      "bats": [
+        {
+          "col": 15,
+          "row": 0
+        }
+      ]
+    },
+    "r31": {
+      "name": "Carrefour en T 31",
+      "layout": [
+        "................",
+        "######.....#####"
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r21",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true,
+          "lock": "crowbar"
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r32",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r41",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "decors": [
+        {
+          "kind": "boulet",
+          "col": 2
+        }
+      ]
+    },
+    "r32": {
+      "name": "Salle 32",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r31",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r22",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r32",
+          "kind": "ironKey",
+          "col": 2,
+          "row": 1
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "statue",
+          "col": 13,
+          "row": 2
+        }
+      ]
+    },
+    "r33": {
+      "name": "Couloir piege 33",
+      "rows": 2,
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r23",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r34",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r43",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "traps": [
+        {
+          "col": 14,
+          "row": 0,
+          "marked": true
+        }
+      ]
+    },
+    "r34": {
+      "name": "Salle 34",
+      "rows": 2,
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r33",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r24",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r35",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r34",
+          "kind": "vial",
+          "col": 3,
+          "row": 1
+        }
+      ]
+    },
+    "r35": {
+      "name": "Carrefour en T 35",
+      "layout": [
+        "................",
+        "######.....#####"
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r34",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r25",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r36",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true,
+          "lock": "crowbar"
+        }
+      ]
+    },
+    "r36": {
+      "name": "Couloir piege 36",
+      "layout": [
+        "................"
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r35",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r37",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        }
+      ],
+      "traps": [
+        {
+          "col": 12,
+          "row": 0,
+          "marked": true
+        }
+      ]
+    },
+    "r37": {
+      "name": "Carrefour en T 37",
+      "layout": [
+        "................",
+        "######.....#####"
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r47",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r36",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r27",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          }
+        }
+      ],
+      "decors": [
+        {
+          "kind": "ecusson",
+          "col": 2
+        }
+      ]
+    },
+    "r41": {
+      "name": "Salle 41",
+      "rows": 2,
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r31",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r42",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "lock": "crowbar"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r51",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "crowbar",
+          "grille": true
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "porteManteau",
+          "col": 14,
+          "row": 1
+        }
+      ]
+    },
+    "r42": {
+      "name": "Salle 42",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r43",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "lock": "crowbar"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r41",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "lock": "crowbar"
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r42",
+          "kind": "poison",
+          "col": 2,
+          "row": 2
+        }
+      ],
+      "skeletons": [
+        {
+          "col": 11,
+          "row": 1
+        }
+      ],
+      "decors": [
+        {
+          "kind": "toile",
+          "side": "left"
+        }
+      ],
+      "fireplaces": [
+        {
+          "id": "fp-r42",
+          "col": 8,
+          "row": 2,
+          "secret": true,
+          "target": "r18",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          }
+        }
+      ]
+    },
+    "r43": {
+      "name": "Salle 43",
+      "rows": 2,
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r53",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "lock": "crowbar"
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r42",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "crowbar"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r33",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "decors": [
+        {
+          "kind": "ecusson",
+          "col": 2
+        }
+      ]
+    },
+    "r44": {
+      "name": "Salle 44",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r54",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          }
+        },
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r2",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "ironKey",
+          "stairs": "up"
+        }
+      ],
+      "decors": [
+        {
+          "kind": "portrait",
+          "col": 4
+        },
+        {
+          "kind": "colonnes"
+        }
+      ]
+    },
+    "r45": {
+      "name": "Salle 45",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r55",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          }
+        }
+      ],
+      "holeTile": {
+        "col": 8,
+        "row": 0,
+        "target": "r81",
+        "spawn": {
+          "col": 2,
+          "row": 0
+        }
+      },
+      "decors": [
+        {
+          "kind": "boulet",
+          "col": 3
+        },
+        {
+          "kind": "toile",
+          "side": "left"
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r45",
+          "kind": "vial",
+          "col": 2,
+          "row": 2
+        }
+      ]
+    },
+    "r46": {
+      "name": "Salle sombre 46",
+      "rows": 2,
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r47",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "lock": "crowbar",
+          "grille": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r56",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "traps": [
+        {
+          "col": 9,
+          "row": 0,
+          "marked": true
+        }
+      ],
+      "bats": [
+        {
+          "col": 0,
+          "row": 0
+        }
+      ],
+      "chests": [
+        {
+          "id": "chest-r46",
+          "col": 13,
+          "row": 1,
+          "lock": "crowbar",
+          "trap": true
+        }
+      ]
+    },
+    "r47": {
+      "name": "Carrefour en T 47",
+      "layout": [
+        "................",
+        "######.....#####"
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r57",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true,
+          "lock": "crowbar"
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r46",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true,
+          "barred": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r37",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "porteManteau",
+          "col": 10,
+          "row": 1
+        }
+      ]
+    },
+    "r51": {
+      "name": "Salle 51",
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r41",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r51",
+          "kind": "purse",
+          "col": 2,
+          "row": 2
+        }
+      ],
+      "fireplaces": [
+        {
+          "id": "fp-r51",
+          "col": 8,
+          "row": 2
+        }
+      ]
+    },
+    "r52": {
+      "name": "Salle 52",
+      "rows": 2,
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r53",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r62",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "chests": [
+        {
+          "id": "chest-r52",
+          "col": 13,
+          "row": 1,
+          "lock": "crowbar"
+        }
+      ]
+    },
+    "r53": {
+      "name": "Salle 53",
+      "rows": 2,
+      "torches": [
+        {
+          "side": "left",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r52",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r43",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          }
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "table",
+          "col": 13,
+          "row": 1
+        }
+      ]
+    },
+    "r54": {
+      "name": "Couloir sombre 54",
+      "layout": [
+        "................"
+      ],
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r64",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r44",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "crowbar"
+        }
+      ],
+      "bats": [
+        {
+          "col": 0,
+          "row": 0
+        }
+      ]
+    },
+    "r55": {
+      "name": "Couloir 55",
+      "layout": [
+        "................"
+      ],
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r65",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r45",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          }
+        }
+      ],
+      "skeletons": [
+        {
+          "col": 7,
+          "row": 0
+        }
+      ]
+    },
+    "r56": {
+      "name": "Salle sombre 56",
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r46",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        }
+      ],
+      "decors": [
+        {
+          "kind": "toile",
+          "side": "left"
+        }
+      ],
+      "items": [
+        {
+          "id": "item-map-r56",
+          "kind": "map",
+          "col": 5,
+          "row": 1
+        }
+      ],
+      "fireplaces": [
+        {
+          "id": "fp-r56",
+          "col": 8,
+          "row": 2,
+          "secret": true,
+          "target": "r3",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          }
+        }
+      ]
+    },
+    "r57": {
+      "name": "Couloir 57",
+      "layout": [
+        "................"
+      ],
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r67",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r47",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true
+        }
+      ],
+      "decors": [
+        {
+          "kind": "piliers"
+        }
+      ]
+    },
+    "r61": {
+      "name": "Couloir a herse 61",
+      "layout": [
+        "................",
+        "######.....#####"
+      ],
+      "torches": [
+        {
+          "side": "left",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r62",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r71",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "ironKey"
+        }
+      ],
+      "herses": [
+        {
+          "triggerCol": 5,
+          "triggerRow": 0,
+          "herseCol": 5,
+          "herseRow": 0,
+          "herseRows": 1,
+          "herseSide": "right",
+          "marked": true
+        }
+      ]
+    },
+    "r62": {
+      "name": "Salle obscure 62",
+      "torches": [],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r72",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "lock": "ironKey"
+        },
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r61",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r52",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "arch": true
+        }
+      ],
+      "traps": [
+        {
+          "col": 14,
+          "row": 0,
+          "marked": true
+        }
+      ]
+    },
+    "r63": {
+      "name": "Salle 63",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r73",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          },
+          "lock": "ironKey"
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r63",
+          "kind": "parchment",
+          "col": 8,
+          "row": 0,
+          "text": "Der Goldene bahnt dir der Feuerweg"
+        }
+      ],
+      "traps": [
+        {
+          "col": 14,
+          "row": 0,
+          "marked": true
+        }
+      ],
+      "fireplaces": [
+        {
+          "id": "fp-r63",
+          "col": 8,
+          "row": 2
+        }
+      ]
+    },
+    "r64": {
+      "name": "Couloir sombre 64",
+      "layout": [
+        "................"
+      ],
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r74",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          }
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r54",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "bats": [
+        {
+          "col": 0,
+          "row": 0
+        }
+      ]
+    },
+    "r65": {
+      "name": "Couloir piege 65",
+      "layout": [
+        "................"
+      ],
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r75",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          }
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r55",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "traps": [
+        {
+          "col": 6,
+          "row": 0,
+          "marked": true
+        }
+      ]
+    },
+    "r66": {
+      "name": "Salle sombre 66",
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r76",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "lock": "crowbar"
+        }
+      ],
+      "chests": [
+        {
+          "id": "chest-r66",
+          "col": 12,
+          "row": 0,
+          "lock": "crowbar",
+          "content": {
+            "kind": "parchment",
+            "text": "Das Kreuz wendet den Blitz um"
+          }
+        }
+      ]
+    },
+    "r67": {
+      "name": "Couloir piege 67",
+      "layout": [
+        "................"
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r77",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          }
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r57",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "decors": [
+        {
+          "kind": "piliers"
+        }
+      ],
+      "traps": [
+        {
+          "col": 14,
+          "row": 0,
+          "marked": true
+        }
+      ]
+    },
+    "r71": {
+      "name": "Tour sombre 71",
+      "round": true,
+      "torches": [
+        {
+          "side": "left",
+          "lit": false
+        },
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r61",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          }
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r5",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "crowbar",
+          "stairs": "up"
+        }
+      ],
+      "fireplaces": [
+        {
+          "id": "fp-r71",
+          "col": 8,
+          "row": 2,
+          "secret": true,
+          "target": "r13",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          }
+        }
+      ]
+    },
+    "r5": {
+      "name": "Tour sombre 5",
+      "round": true,
+      "torches": [
+        {
+          "side": "left",
+          "lit": false
+        },
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r71",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "stairs": "down"
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r5",
+          "kind": "goldKey",
+          "col": 4,
+          "row": 1
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "statue",
+          "col": 12,
+          "row": 1
+        }
+      ]
+    },
+    "r72": {
+      "name": "Salle 72",
+      "rows": 2,
+      "torches": [
+        {
+          "side": "left",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r62",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          }
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r73",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r72",
+          "kind": "purse",
+          "col": 2,
+          "row": 1
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "chaise",
+          "col": 14,
+          "row": 1
+        }
+      ]
+    },
+    "r73": {
+      "name": "Salle 73",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r72",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r63",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "ironKey"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r74",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r73",
+          "kind": "ring",
+          "col": 13,
+          "row": 2
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "porteManteau",
+          "col": 15,
+          "row": 2
+        }
+      ],
+      "skeletons": [
+        {
+          "col": 11,
+          "row": 1
+        }
+      ]
+    },
+    "r74": {
+      "name": "Salle 74",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r73",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r64",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "crowbar"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r75",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "arch": true
+        }
+      ]
+    },
+    "r75": {
+      "name": "Salle obscure 75",
+      "torches": [],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r74",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r65",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "ironKey"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r76",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          },
+          "arch": true
+        }
+      ]
+    },
+    "r76": {
+      "name": "Salle obscure 76",
+      "torches": [],
+      "doors": [
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r75",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r66",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "crowbar"
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "table",
+          "col": 13,
+          "row": 1
+        }
+      ],
+      "bats": [
+        {
+          "col": 15,
+          "row": 0
+        }
+      ]
+    },
+    "r77": {
+      "name": "Tour ronde 77",
+      "round": true,
+      "doors": [
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r6",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "arch": true,
+          "stairs": "up"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r67",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r77",
+          "kind": "vial",
+          "col": 4,
+          "row": 1
+        }
+      ],
+      "furnitures": [
+        {
+          "kind": "statue",
+          "col": 12,
+          "row": 1
+        }
+      ]
+    },
+    "r6": {
+      "name": "Tour ronde 6",
+      "round": true,
+      "doors": [
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r77",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          },
+          "arch": true,
+          "stairs": "down"
+        }
+      ],
+      "decors": [
+        {
+          "kind": "croix",
+          "col": 8
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r6",
+          "kind": "crucifix",
+          "col": 12,
+          "row": 1,
+          "pedestal": true
+        }
+      ]
+    },
+    "r2": {
+      "name": "Salle du diamant",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r44",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          },
+          "stairs": "down"
+        }
+      ],
+      "climbTile": {
+        "col": 8,
+        "row": 1,
+        "target": "r3",
+        "spawn": {
+          "col": 10,
+          "row": 0
+        }
+      },
+      "items": [
+        {
+          "id": "item-r2",
+          "kind": "diamond",
+          "col": 10,
+          "row": 1,
+          "pedestal": true,
+          "arrowTrap": {
+            "side": "left"
+          }
+        }
+      ],
+      "decors": [
+        {
+          "kind": "colonnes"
+        },
+        {
+          "kind": "aigleNoir",
+          "col": 11
+        }
+      ],
+      "traps": [
+        {
+          "col": 9,
+          "row": 0,
+          "marked": true
+        }
+      ]
+    },
+    "r3": {
+      "name": "Chambre de l'aigle",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [],
+      "holeTile": {
+        "col": 11,
+        "row": 0,
+        "target": "r2",
+        "spawn": {
+          "col": 9,
+          "row": 1
+        }
+      },
+      "items": [
+        {
+          "id": "item-r3",
+          "kind": "eagle",
+          "col": 10,
+          "row": 1,
+          "pedestal": true,
+          "arrowTrap": {
+            "side": "left"
+          },
+          "closesHole": true
+        }
+      ],
+      "decors": [
+        {
+          "kind": "colonnes"
+        }
+      ],
+      "fireplaces": [
+        {
+          "id": "fp-r3",
+          "col": 8,
+          "row": 2,
+          "secret": true,
+          "target": "r56",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          }
+        }
+      ]
+    },
+    "r81": {
+      "name": "Catacombes entree",
+      "torches": [
+        {
+          "side": "left",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r88",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true,
+          "barred": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r82",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true,
+          "lock": "crowbar"
+        }
+      ],
+      "decors": [
+        {
+          "kind": "toile",
+          "side": "right"
+        }
+      ],
+      "skeletons": [
+        {
+          "col": 7,
+          "row": 0
+        }
+      ],
+      "chests": [
+        {
+          "id": "chest-vial",
+          "col": 1,
+          "row": 2,
+          "lock": "crowbar",
+          "content": {
+            "kind": "vial"
+          }
+        }
+      ],
+      "climbTile": {
+        "col": 5,
+        "row": 1,
+        "target": "r45",
+        "spawn": {
+          "col": 5,
+          "row": 0
+        }
+      }
+    },
+    "r82": {
+      "name": "Catacombes 82",
+      "layout": [
+        "................"
+      ],
+      "torches": [
+        {
+          "side": "left",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r81",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r83",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true
+        }
+      ],
+      "ghosts": [
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "hits": 1
+        }
+      ]
+    },
+    "r83": {
+      "name": "Catacombes sombres 83",
+      "layout": [
+        "................",
+        "######.....#####"
+      ],
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r82",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r84",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r83",
+          "kind": "parchment",
+          "col": 12,
+          "row": 0,
+          "text": "Der Reif verdeckt dir das Ubel"
+        }
+      ],
+      "herses": [
+        {
+          "triggerCol": 6,
+          "triggerRow": 0,
+          "herseCol": 5,
+          "herseRow": 0,
+          "herseRows": 1,
+          "herseSide": "right",
+          "marked": true
+        }
+      ]
+    },
+    "r84": {
+      "name": "Catacombes 84",
+      "layout": [
+        "................"
+      ],
+      "torches": [
+        {
+          "side": "left",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r83",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "grille": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r85",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          },
+          "grille": true
+        }
+      ],
+      "ghosts": [
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "hits": 3
+        }
+      ]
+    },
+    "r85": {
+      "name": "Catacombes sombres 85",
+      "layout": [
+        "................",
+        "######.....#####"
+      ],
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r84",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r86",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true,
+          "lock": "crowbar"
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r85",
+          "kind": "purse",
+          "col": 3,
+          "row": 0
+        }
+      ]
+    },
+    "r86": {
+      "name": "Catacombes 86",
+      "layout": [
+        "................"
+      ],
+      "torches": [
+        {
+          "side": "left",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r85",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r87",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          },
+          "grille": true
+        }
+      ],
+      "ghosts": [
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "hits": 4
+        }
+      ]
+    },
+    "r87": {
+      "name": "Catacombes sombres 87",
+      "torches": [
+        {
+          "side": "left",
+          "lit": false
+        },
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 8,
+          "row": 2,
+          "side": "front",
+          "target": "r86",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r88",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "grille": true,
+          "lock": "crowbar"
+        }
+      ],
+      "chests": [
+        {
+          "id": "chest-r87",
+          "col": 2,
+          "row": 2,
+          "lock": "crowbar",
+          "content": {
+            "kind": "purse"
+          }
+        }
+      ]
+    },
+    "r88": {
+      "name": "Catacombes sombres 88",
+      "layout": [
+        "................",
+        "######.....#####"
+      ],
+      "torches": [
+        {
+          "side": "right",
+          "lit": false
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r87",
+          "spawn": {
+            "col": 15,
+            "row": 0
+          },
+          "grille": true
+        },
+        {
+          "col": 8,
+          "row": 1,
+          "side": "front",
+          "target": "r89",
+          "spawn": {
+            "col": 0,
+            "row": 0
+          },
+          "lock": "crowbar"
+        },
+        {
+          "col": 15,
+          "row": 0,
+          "side": "right",
+          "target": "r81",
+          "spawn": {
+            "col": 8,
+            "row": 2
+          },
+          "grille": true
+        }
+      ],
+      "herses": [
+        {
+          "triggerCol": 6,
+          "triggerRow": 0,
+          "herseCol": 5,
+          "herseRow": 0,
+          "herseRows": 1,
+          "herseSide": "right",
+          "marked": true
+        }
+      ]
+    },
+    "r89": {
+      "name": "Chambre du livre",
+      "torches": [
+        {
+          "side": "right",
+          "lit": true
+        }
+      ],
+      "doors": [
+        {
+          "col": 0,
+          "row": 0,
+          "side": "left",
+          "target": "r88",
+          "spawn": {
+            "col": 8,
+            "row": 1
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "item-r89",
+          "kind": "book",
+          "col": 8,
+          "row": 1,
+          "pedestal": true,
+          "text": "Auf dem Stern wirst du dir erheben"
+        }
+      ],
+      "decors": [
+        {
+          "kind": "croix",
+          "col": 8
+        }
+      ]
+    }
+  }
+}

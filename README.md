@@ -1,9 +1,10 @@
 # L'Aigle d'Or - Remake
 
-> **Hommage non officiel.** Projet indépendant, **sans lien avec Louis-Marie Rocques ni
-> avec ses ayants droit**, qui restent seuls titulaires des droits sur *L'Aigle d'Or*.
-> Rien du jeu de 1984 n'est redistribué ici - **ni code, ni ressource, ni texte, ni le
-> plan de son château**. Voir [Mentions légales](#mentions-légales--licence) et
+> **Diffusé avec l'accord de l'auteur.** Le 15 novembre 2026, **Louis-Marie Rocques** a
+> donné son accord à la diffusion de ce remake et du **plan du château original**, qui
+> est désormais le château joué par défaut. Il reste, avec ses ayants droit, seul
+> titulaire des droits sur *L'Aigle d'Or*. Aucun code ni aucune ressource du jeu de 1984
+> n'est repris ici. Voir [Mentions légales](#mentions-légales--licence) et
 > [`NOTICE`](NOTICE).
 
 Remake web (HTML5 Canvas + TypeScript) du jeu d'action-aventure culte **L'Aigle d'Or**
@@ -36,7 +37,7 @@ Deux règles que je me suis fixées :
   procédural** : aucune image, aucun son, aucune police embarquée (le HUD emprunte le
   `monospace` du système) - les salles, les
   meubles, le squelette ou les flammes sont du code qui dessine. Le build actuel produit un
-  `dist/index.html` **autonome de ~93 ko**, JS et CSS inlinés.
+  `dist/index.html` **autonome de ~106 ko**, JS et CSS inlinés.
 
 Cette seconde règle n'est pas un exercice de style : c'est elle qui dicte l'architecture.
 Une salle est une poignée de données déclaratives (`RoomDef`), le rendu est un ensemble de
@@ -67,8 +68,8 @@ l'exécution : c'est un autre build, à partir des mêmes données.
 ## Déroulé d'une partie
 
 1. Écran titre → **Entrée**.
-2. Écran de **sélection** : **1 – Entrer dans le château** (le **donjon de Ronceval**,
-   13 salles) · **2 – Aller chez le marchand** · **3 – Charger un château** (un
+2. Écran de **sélection** : **1 – Entrer dans le château** (le **château de
+   L'Aigle d'Or**, 65 salles) · **2 – Aller chez le marchand** · **3 – Charger un château** (un
    `.json` fabriqué dans l'**éditeur** ; on peut aussi le **glisser sur la fenêtre**).
    Le château actif est rappelé sous la bourse.
 3. Au **marchand** (achats `1`–`4`, sortie `Q`/Échap) on dépense son or ; on revient à la sélection.
@@ -111,8 +112,8 @@ ramassé selon un barème (voir *Score*) ; il s'affiche au HUD et sur les écran
 > **SPOILER ALERT.** Ce qui précède est le manuel : comment lancer le jeu et à quoi
 > servent les touches. **À partir d'ici, le README donne les solutions** - l'effet réel de
 > chaque objet, ce qui trahit un piège, comment s'ouvrent les passages secrets. Et
-> `src/world/ronceval.ts`, le château livré, est la **réponse complète** : ce que contient
-> chaque salle, à sa place exacte.
+> `src/world/aigle-dor.json`, le château du jeu, est la **réponse complète** : ce que
+> contient chaque salle, à sa place exacte.
 >
 > Or ce jeu est fait pour qu'on découvre tout cela **sur place**, note après note et plan
 > dessiné à la main : c'est la première des deux règles que s'est fixées ce projet.
@@ -263,15 +264,14 @@ Réunir les **trois trophées** - **Aigle d'Or** (puissance), **Diamant Bleu** (
 **Livre Sacré** (sagesse) - puis revenir à la **porte principale** de l'entrée (mur du
 fond) : on **gagne** avec les trois, sinon on **revient à la sélection**.
 
-Le château livré est le **donjon de Ronceval** (`src/world/ronceval.ts`) : 13 salles sur
-quatre niveaux, écrites pour ce dépôt. Les salles ne forment pas une grille évidente :
-sans carte, dessinez-la à la main - comme à l'époque.
+Le château joué par défaut est **celui de L'Aigle d'Or** (`src/world/aigle-dor.json`) :
+ses 65 salles, reconstruites dans l'éditeur et diffusées avec l'accord de Louis-Marie
+Rocques. Les salles ne forment pas une grille évidente : sans carte, dessinez-la à la
+main - comme à l'époque.
 
-> **Et le château de 1984 ?** Il n'est pas ici, et ne le sera pas : l'agencement de ses
-> salles, la position de ses pièges et de ses objets sont l'œuvre de Louis-Marie Rocques.
-> Le jeu sait charger n'importe quel château depuis un `.json` (**touche 3**) : qui veut
-> rejouer celui d'origine le **reconstruit lui-même** dans l'éditeur, à partir de ses
-> propres notes. Le moteur, lui, est complet.
+Le **donjon de Ronceval** (`src/world/ronceval.ts`), 13 salles sur quatre niveaux écrites
+pour ce dépôt, reste le **château d'exemple** du format : l'éditeur l'ouvre (bouton
+*Ronceval*) et l'exporte en `.json`, que le jeu charge par la **touche 3**.
 
 ---
 
@@ -281,14 +281,16 @@ sans carte, dessinez-la à la main - comme à l'époque.
 > **SPOILER ALERT** - on entre ici par la porte de service : tout ce qu'une salle peut
 > cacher - pièges, passages secrets, objets - y est décrit comme une donnée à écrire. Les
 > exemples sont inventés pour la documentation, mais `src/world/ronceval.ts`, le fichier à
-> copier pour écrire le sien, est le château livré **au complet**.
+> copier pour écrire le sien, est le château d'exemple **au complet**.
 
 Tout le château est **déclaratif** : on édite des **données**, jamais le rendu. Deux
 fichiers :
 
 - **`src/world/rooms.ts`** - le **format** : ce qu'une salle peut être (`RoomDef`), et rien d'autre.
-- **`src/world/ronceval.ts`** - le **château livré** (`RONCEVAL_ROOMS`), son point de
+- **`src/world/ronceval.ts`** - le **château d'exemple** (`RONCEVAL_ROOMS`), son point de
   départ et sa salle oubliette. C'est le fichier à copier pour écrire le sien.
+- **`src/world/aigle-dor.json`** - le **château du jeu**, au format JSON de l'éditeur
+  (lu par `aigleDor.ts`). On le retouche dans l'éditeur plutôt qu'à la main.
 - **`src/config.ts`** - réglages globaux : articles du marchand (`SHOP`), or de départ,
   vie, hémorragie, durée de torche, etc.
 
@@ -599,7 +601,7 @@ pause, comme pour l'inventaire.
 
 Rien n'est saisi à la main : **le plan est entièrement déduit des `RoomDef`**
 (`src/world/mapLayout.ts`), donc il vaut pour **n'importe quel château**, pas seulement
-celui qui est livré.
+celui du jeu.
 
 - **L'orientation de chaque salle.** C'est la clé du plan. Une salle est toujours dessinée
   **de face**, mais rien ne dit qu'elles regardent toutes le même point cardinal : le
@@ -659,7 +661,9 @@ bascule suffit.
 
 ## Réglages globaux
 
-- `ronceval.ts` : le château est dans `RONCEVAL_ROOMS`, avec `RONCEVAL_START_ROOM` (salle
+- `aigleDor.ts` : le château joué par défaut (`AIGLE_DOR_CASTLE`), lu depuis
+  `aigle-dor.json`.
+- `ronceval.ts` : le château d'exemple est dans `RONCEVAL_ROOMS`, avec `RONCEVAL_START_ROOM` (salle
   de départ) et `RONCEVAL_START_SPAWN` (`{col,row}` de départ). `OUBLIETTE_ROOM` (la
   salle où l'on tombe) est dans `rooms.ts`, avec le reste du format.
 - `items.ts` : `SCORE` (barème de points par objet ramassé), noms, articles du marchand.
@@ -735,8 +739,8 @@ bien qu'il ne peut pas diverger du format. La dépendance ne va que dans ce sens
 
 On y bâtit le plan en **tirant un trait d'une salle à l'autre** - l'éditeur écrit alors la
 paire de portes et leurs `spawn` réciproques, si bien que les règles ci-dessus sont vraies
-**par construction**. Un **validateur** vérifie le reste en continu ; le château livré
-n'y produit ni erreur ni avertissement.
+**par construction**. Un **validateur** vérifie le reste en continu ; le donjon de
+Ronceval n'y produit ni erreur ni avertissement.
 
 Le fichier produit contient les `RoomDef` **verbatim**, moins l'`id` (la clé fait foi), et
 les valeurs par défaut élaguées. On le charge par l'écran de sélection, **3 – Charger un
@@ -758,7 +762,8 @@ Le monde est un **plan-sol** : chaque entité a `x ∈ [-1,1]` (gauche→droite)
   entités triées par profondeur.
 - `src/engine/` - boucle à pas fixe, Renderer Canvas, entrées (clavier AZERTY/QWERTY géré).
 - `src/entities/` - Player, Guard, Bat, Ghost, ArrowTrap, Door, Item.
-- `src/world/` - `rooms.ts` (le format), `ronceval.ts` (le château livré), `Room.ts`
+- `src/world/` - `rooms.ts` (le format), `aigle-dor.json` + `aigleDor.ts` (le château
+  du jeu), `ronceval.ts` (le château d'exemple), `Room.ts`
   (runtime + praticabilité), `grid.ts`, `mapLayout.ts` (déduction du plan : niveaux +
   position de chaque salle en grille), `loadCastle.ts` (lecture d'un château `.json`).
 - `src/systems/` - déplacement (`physics.ts`), combat, interaction (`interaction.ts`).
@@ -781,12 +786,12 @@ d'origine, et **[`EDITEUR.md`](EDITEUR.md)** pour le mode d'emploi de l'éditeur
 
 **L'Aigle d'Or** est une œuvre originale de **Louis-Marie Rocques**, publiée par **Loriciels**
 (1984/1985). Le jeu d'origine - son nom, son univers, son scénario et l'ensemble de ses
-éléments - **reste la propriété exclusive de son auteur et de ses ayants droit**. Ce projet
-n'est **ni affilié, ni approuvé, ni soutenu** par eux.
+éléments - **reste la propriété exclusive de son auteur et de ses ayants droit**.
 
-**« Abandonware » n'existe pas en droit** : ni la disparition de l'éditeur, ni l'arrêt de la
-commercialisation, ni l'âge du jeu ne le font tomber dans le domaine public. Cet hommage
-existe donc **par tolérance**, pas par droit acquis.
+**Accord de l'auteur.** Le **15 novembre 2026**, Louis-Marie Rocques a donné son accord à
+la **diffusion de ce remake et du plan du château original**. Cet accord ne transfère aucun
+droit : il autorise la diffusion, gratuite et non commerciale, de ce projet tel qu'il est
+publié ici.
 
 Ce dépôt est un **hommage** à l'un des tout premiers jeux d'aventure en **« 3D »** de l'histoire
 du jeu vidéo. Il s'agit d'une **reconstruction fondée sur l'idée et sur les mécaniques** du
@@ -797,10 +802,15 @@ jeu - lesquelles ne sont **pas protégeables** - entièrement **réécrite à pa
 - Un **moteur**, un **format de château** et un **éditeur** écrits intégralement pour ce
   projet. Aucun code, graphisme, son ou donnée n'a été **extrait du produit d'origine** ;
   tout le rendu est **vectoriel et procédural**.
-- Un **château original**, le *donjon de Ronceval* ([`src/world/ronceval.ts`](src/world/ronceval.ts)),
+- **Le plan du château de L'Aigle d'Or** ([`src/world/aigle-dor.json`](src/world/aigle-dor.json)),
+  reconstruit salle par salle dans l'éditeur. L'agencement de ses salles, la position de
+  ses pièges et de ses objets sont l'**œuvre de Louis-Marie Rocques** ; ils sont diffusés
+  ici **avec son accord**.
+- Un **château d'exemple**, le *donjon de Ronceval* ([`src/world/ronceval.ts`](src/world/ronceval.ts)),
   écrit pour ce dépôt. Il n'emprunte **rien** au plan de 1984.
-- Des **textes d'écran** (titre, victoire, écrits trouvés en jeu) rédigés pour ce projet.
-  **Aucune phrase** du jeu d'origine n'y est reprise.
+- Des **textes d'écran** (titre, victoire, écrits du donjon de Ronceval) rédigés pour ce
+  projet. Les seules phrases du jeu d'origine sont les **inscriptions de son château**,
+  diffusées avec lui.
 - Le **mode MO5** (touche `T`, voir plus haut) restitue les **contraintes matérielles
   du Thomson MO5** - sa palette câblée de 16 couleurs et le dessin au trait qu'imposait
   sa mémoire - appliquées aux **primitives de ce dépôt**. Il ne reproduit aucun écran du
@@ -808,11 +818,6 @@ jeu - lesquelles ne sont **pas protégeables** - entièrement **réécrite à pa
 
 **Ce qui n'est pas dans ce dépôt :**
 
-- **Le plan du château de L'Aigle d'Or.** L'agencement de ses salles, la position de ses
-  pièges et de ses objets sont l'**œuvre de Louis-Marie Rocques**, et non la nôtre : ils ne
-  sont distribués ici **sous aucune forme**. Le jeu sait charger un château depuis un
-  fichier JSON (**touche 3**) ; qui veut rejouer celui de 1984 le **reconstruit lui-même**
-  dans l'éditeur.
 - **Aucune capture d'écran**, aucun document ni aucune ressource issus du jeu d'origine.
 
 **Aucune commercialisation** de ce projet ou de ses dérivés n'est autorisée : il est diffusé
@@ -833,4 +838,6 @@ condition qu'ils restent à des fins non commerciales**. Toute utilisation comme
 
 Elle **ne porte que sur notre propre travail** : elle ne confère aucun droit sur *L'Aigle
 d'Or*, sur son titre, ni sur quoi que ce soit qui appartienne à son auteur ou à ses ayants
-droit - **on ne concède pas ce qu'on ne détient pas**.
+droit - **on ne concède pas ce qu'on ne détient pas**. En particulier, le **plan du
+château** (`src/world/aigle-dor.json`) n'est pas couvert par cette licence : le réutiliser
+hors de ce projet demande l'accord de son auteur.

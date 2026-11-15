@@ -1,18 +1,15 @@
 /**
- * LE DONJON DE RONCEVAL - le château livré avec le jeu.
+ * LE DONJON DE RONCEVAL - le château d'exemple.
  *
- * Château original, écrit pour ce dépôt : il n'emprunte rien au plan de 1984. Son
- * rôle est double - donner une partie complète à qui ouvre `dist/index.html`, et
- * servir de démonstration exhaustive du format décrit dans `world/rooms.ts` : on y
+ * Château original, écrit pour ce dépôt : il n'emprunte rien au plan de 1984. Il
+ * sert de démonstration exhaustive du format décrit dans `world/rooms.ts`, écrite
+ * à la main et commentée (l'éditeur l'ouvre par son bouton « Ronceval ») : on y
  * trouve au moins une fois chaque élément que l'éditeur sait poser (serrures,
  * arches, grilles, escaliers, cheminée à passage secret, dalle étoile et trou,
  * herse, oubliette, gardes, chauves-souris, fantômes, meubles, squelettes).
  *
- * Le château de L'AIGLE D'OR (Loriciels, 1984) n'est PAS dans ce dépôt : son plan
- * est l'œuvre de Louis-Marie Rocques, pas la nôtre. Qui veut le rejouer le
- * reconstruit dans l'éditeur (`dist/editor.html`) et le charge depuis l'écran de
- * sélection (touche 3) - voir le NOTICE et la section « Jouer un autre château »
- * du README.
+ * Le château joué par défaut est celui de L'AIGLE D'OR (`aigle-dor.json`), diffusé
+ * avec l'accord de son auteur, Louis-Marie Rocques - voir le NOTICE.
  *
  * 13 salles sur quatre niveaux : sous-sol (cave, souterrain, puits),
  * rez-de-chaussée (entrée, corps de garde, cuisines, galerie, armurerie,
@@ -265,7 +262,7 @@ export const RONCEVAL_ROOMS: Record<RoomId, RoomDef> = {
   },
 };
 
-/** Le château livré, prêt à jouer : celui que le jeu ouvre par défaut. */
+/** Le château d'exemple, prêt à jouer (exportable depuis l'éditeur). */
 export const RONCEVAL_CASTLE: CastleDef = {
   rooms: RONCEVAL_ROOMS,
   start: RONCEVAL_START_ROOM,

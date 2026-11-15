@@ -10,6 +10,7 @@
 
 import "./style.css";
 import type { CastleDef } from "../world/rooms";
+import { AIGLE_DOR_CASTLE } from "../world/aigleDor";
 import { RONCEVAL_CASTLE } from "../world/ronceval";
 import { parseCastle } from "../world/loadCastle";
 import { makeExitDoor, makeRoom } from "./doors";
@@ -27,9 +28,9 @@ const $ = <T extends HTMLElement>(id: string): T => {
 };
 
 const store = new Store();
-// Le château livré est le point de départ, mais l'éditeur travaille sur une
+// Le château du jeu est le point de départ, mais l'éditeur travaille sur une
 // copie : on ne veut pas muter la constante que le jeu embarque.
-store.load(structuredClone(RONCEVAL_CASTLE), "ronceval");
+store.load(structuredClone(AIGLE_DOR_CASTLE), "aigle-dor");
 
 let notice = "";
 const report = (message: string): void => {
@@ -59,6 +60,11 @@ for (const { tool, label } of TOOLS) {
 // ── Barre d'outils ──────────────────────────────────────────────────────────
 
 $("btn-original").addEventListener("click", () => {
+  if (!confirmDiscard()) return;
+  store.load(structuredClone(AIGLE_DOR_CASTLE), "aigle-dor");
+});
+
+$("btn-ronceval").addEventListener("click", () => {
   if (!confirmDiscard()) return;
   store.load(structuredClone(RONCEVAL_CASTLE), "ronceval");
 });

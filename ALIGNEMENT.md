@@ -5,8 +5,9 @@ d'après la *Solution de la version Thomson* (carte annotée par Loewen, 2003), 
 Grospixels (grospixels.com/site/Aigledor1.php) et des tests sur le jeu original.
 
 > Ce document **décrit** le jeu de 1984 pour situer nos écarts : c'est un carnet
-> d'observation, pas une redistribution. Il ne contient ni son code, ni ses ressources, ni
-> le plan de son château - lequel n'est pas dans ce dépôt (voir [`NOTICE`](NOTICE)). Les
+> d'observation. Il ne contient ni son code, ni ses ressources ; le plan de son château,
+> lui, est dans `src/world/aigle-dor.json`, diffusé avec l'accord de son auteur (voir
+> [`NOTICE`](NOTICE)). Les
 > fichiers `asset_legacy/` qu'il cite sont notre documentation de travail **privée**, non
 > versionnée et non diffusée.
 
@@ -157,10 +158,10 @@ Légende : ✅ conforme · ⚠️ divergence (volontaire ou à trancher) · ❌ 
 - **Cases occupées par un objet** : dans l'original on **ne pouvait pas** marcher dessus
   (limite de chevauchement de pixels de l'époque). On **autorise** de s'y tenir (pour
   ramasser). Divergence assumée.
-- **Château livré** : le jeu embarque le **donjon de Ronceval** (`RONCEVAL_ROOMS`,
-  13 salles écrites pour ce dépôt), et non le plan de L'Aigle d'Or - qui appartient à son
-  auteur. Le moteur reste capable de jouer n'importe quel château chargé en `.json`
-  (touche 3), y compris celui que vous reconstruiriez vous-même dans l'éditeur.
+- **Château joué** : depuis le 15 novembre 2026, le jeu embarque le **plan de L'Aigle
+  d'Or** (`src/world/aigle-dor.json`, 65 salles), avec l'accord de Louis-Marie Rocques.
+  Le **donjon de Ronceval** (13 salles écrites pour ce dépôt) reste le château d'exemple
+  de l'éditeur. Le moteur joue n'importe quel château chargé en `.json` (touche 3).
 - **Bague « à l'émeraude »** : l'original ne parle que d'« une bague » (la pierre, turquoise,
   est entre le vert et le bleu). Notre lecture
   émeraude est une **interprétation assumée**.

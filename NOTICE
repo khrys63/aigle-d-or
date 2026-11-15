@@ -9,11 +9,16 @@ Loriciels (1984 sur Oric, 1985 sur Thomson MO5 et Amstrad CPC).
 
 Le jeu d'origine - son nom, son univers, son scénario, le plan de son château et
 l'ensemble de ses éléments - reste la propriété de son auteur et de ses ayants
-droit. Ce projet n'est ni affilié, ni approuvé, ni soutenu par eux.
+droit.
 
-« Abandonware » n'existe pas en droit : ni la disparition de l'éditeur, ni
-l'arrêt de la commercialisation, ni l'âge du jeu ne le font tomber dans le
-domaine public. Cet hommage existe donc par tolérance, pas par droit acquis.
+================================================================================
+AUTORISATION DE L'AUTEUR
+================================================================================
+
+Le 15 novembre 2026, Louis-Marie Rocques a donné son accord à la diffusion de ce
+remake et du plan du château original de « L'Aigle d'Or ». Cet accord ne
+transfère aucun droit : il autorise la diffusion, gratuite et non commerciale,
+de ce projet tel qu'il est publié ici.
 
 ================================================================================
 NATURE DE CE PROJET
@@ -30,19 +35,20 @@ CE QUI EST DANS CE DÉPÔT
     projet. Aucun code, graphisme, son ou donnée n'a été extrait du produit
     d'origine ; tout le rendu est vectoriel et procédural.
 
-  - Un château original, « le donjon de Ronceval » (src/world/ronceval.ts), écrit
-    pour ce dépôt. Il n'emprunte rien au plan de 1984.
+  - Le plan du château de L'Aigle d'Or (src/world/aigle-dor.json), reconstruit
+    salle par salle dans l'éditeur de ce projet. L'agencement de ses salles, la
+    position de ses pièges et de ses objets sont l'œuvre de Louis-Marie Rocques ;
+    ils sont diffusés ici avec son accord (voir ci-dessus). C'est le château
+    joué par défaut.
 
-  - Des textes d'écran (titre, victoire, écrits trouvés en jeu) rédigés pour ce
-    projet. Aucune phrase du jeu d'origine n'y est reprise.
+  - Un château d'exemple, « le donjon de Ronceval » (src/world/ronceval.ts),
+    écrit pour ce dépôt. Il n'emprunte rien au plan de 1984.
+
+  - Des textes d'écran (titre, victoire, écrits du donjon de Ronceval) rédigés
+    pour ce projet. Les seules phrases du jeu d'origine sont les inscriptions
+    que contient son château, diffusées avec lui.
 
 CE QUI N'EST PAS DANS CE DÉPÔT
-
-  - Le plan du château de L'Aigle d'Or. L'agencement de ses salles, la position
-    de ses pièges et de ses objets sont l'œuvre de Louis-Marie Rocques, et non la
-    nôtre : ils ne sont pas distribués ici, sous aucune forme. Le jeu sait charger
-    un château depuis un fichier JSON (écran de sélection, touche 3) ; qui veut
-    rejouer celui de 1984 le reconstruit lui-même dans l'éditeur.
 
   - Aucune capture d'écran, aucun document ni aucune ressource issus du jeu
     d'origine.
@@ -60,7 +66,9 @@ le fichier LICENSE), qui interdit tout usage commercial.
 Cette licence ne porte que sur notre propre travail. Elle ne confère aucun droit
 sur « L'Aigle d'Or », sur son titre, ni sur quoi que ce soit qui appartienne à son
 auteur ou à ses ayants droit - nous ne pouvons pas concéder ce que nous ne
-détenons pas.
+détenons pas. En particulier, le plan du château (src/world/aigle-dor.json)
+n'est pas couvert par cette licence : le réutiliser hors de ce projet demande
+l'accord de son auteur.
 
 ================================================================================
 RETRAIT

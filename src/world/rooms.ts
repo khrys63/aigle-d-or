@@ -4,8 +4,9 @@ import type { ChestContent } from "../entities/Chest";
 
 /**
  * LE FORMAT DE CHÂTEAU - rien d'autre : ce module ne décrit aucune salle, il dit
- * seulement ce qu'une salle peut être. Le château livré est dans `ronceval.ts` ;
- * n'importe quel autre se charge depuis un fichier JSON (`loadCastle.ts`).
+ * seulement ce qu'une salle peut être. Le château du jeu est `aigle-dor.json`,
+ * l'exemple commenté `ronceval.ts` ; n'importe quel autre se charge depuis un
+ * fichier JSON (`loadCastle.ts`).
  *
  * Gabarit hérité des micro-ordinateurs de 1985 : salles de 16 dalles de large et
  * 2 à 3 de profondeur.
@@ -216,7 +217,7 @@ export const OUBLIETTE_ROOM: RoomId = "oubliette";
 
 /**
  * Un château complet : ses salles et les trois repères dont le jeu a besoin pour
- * s'y lancer. Le jeu en embarque un (`RONCEVAL_CASTLE`) mais n'y est pas tenu :
+ * s'y lancer. Le jeu en embarque un (`AIGLE_DOR_CASTLE`) mais n'y est pas tenu :
  * l'éditeur (`dist/editor.html`) en produit d'autres, chargés depuis un fichier
  * JSON par l'écran de sélection (`world/loadCastle.ts`).
  */

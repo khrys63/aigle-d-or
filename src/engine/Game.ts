@@ -6,7 +6,7 @@ import { Input } from "./Input";
 import { Player } from "../entities/Player";
 import { World, type Room } from "../world/Room";
 import type { CastleDef } from "../world/rooms";
-import { RONCEVAL_CASTLE } from "../world/ronceval";
+import { AIGLE_DOR_CASTLE } from "../world/aigleDor";
 import { dropCastle, pickCastle, type LoadedCastle } from "../world/loadCastle";
 import { jumpInPlace, stepPlayer } from "../systems/physics";
 import { resolveCombat } from "../systems/combat";
@@ -54,7 +54,7 @@ export class Game {
   /** Drain temporel : temps écoulé depuis la dernière perte de forces (s). */
   private drainTimer = 0;
   /** Château joué : celui qui est livré, ou celui d'un fichier chargé (touche 3). */
-  private castle: CastleDef = RONCEVAL_CASTLE;
+  private castle: CastleDef = AIGLE_DOR_CASTLE;
   /** Nom du fichier chargé, affiché à la sélection ("" = le château livré). */
   private castleName = "";
   /** Dernier échec de chargement, affiché à la sélection. */

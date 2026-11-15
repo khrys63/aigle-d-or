@@ -14,15 +14,15 @@ const cx = VIEW_W / 2;
 /**
  * Écran-titre. Le texte est de nous : rien n'est repris de l'écran d'origine, dont
  * la prose appartient à son auteur (voir NOTICE). Le sous-titre dit d'entrée à qui
- * l'on doit l'idée, et ce que ce projet n'est pas.
+ * l'on doit le jeu, et avec quel accord il est diffusé.
  */
 export function drawTitle(r: Renderer): void {
   overlay(r);
   r.text("L'AIGLE D'OR", cx, 66, COLORS.eagle, 56, "center");
-  r.text("Hommage non officiel à l'œuvre de Louis-Marie Rocques (Loriciels, 1984)", cx, 100, COLORS.text, 15, "center");
-  r.text("Projet indépendant, sans lien avec l'auteur ni ses ayants droit", cx, 122, COLORS.textDim, 13, "center");
+  r.text("Hommage à l'œuvre de Louis-Marie Rocques (Loriciels, 1984)", cx, 100, COLORS.text, 15, "center");
+  r.text("Remake diffusé avec l'aimable accord de l'auteur", cx, 122, COLORS.textDim, 13, "center");
 
-  r.text("Trois jours de selle sous la pluie, et le donjon de Ronceval se lève", cx, 190, COLORS.text, 14, "center");
+  r.text("Trois jours de selle sous la pluie, et le château se lève", cx, 190, COLORS.text, 14, "center");
   r.text("enfin au bout de la lande.", cx, 210, COLORS.text, 14, "center");
   r.text("On dit au village qu'il garde plus d'or qu'un royaume - et qu'aucun", cx, 250, COLORS.text, 14, "center");
   r.text("de ceux qui ont poussé sa porte n'est revenu le raconter.", cx, 270, COLORS.text, 14, "center");
@@ -34,8 +34,8 @@ export function drawTitle(r: Renderer): void {
 export function drawWin(r: Renderer, player: Player): void {
   overlay(r);
   r.text("VICTOIRE !", cx, 195, COLORS.doorExit, 52, "center");
-  r.text("Le Livre, le Diamant et l'Aigle d'Or ont quitté Ronceval avec vous.", cx, 245, COLORS.text, 16, "center");
-  r.text("Le donjon peut se rendormir.", cx, 270, COLORS.eagle, 16, "center");
+  r.text("Le Livre, le Diamant et l'Aigle d'Or ont quitté le château avec vous.", cx, 245, COLORS.text, 16, "center");
+  r.text("Le château peut se rendormir.", cx, 270, COLORS.eagle, 16, "center");
   r.text(`Score final : ${player.score}`, cx, 305, COLORS.eagle, 20, "center");
   r.text("Appuyez sur ENTREE pour rejouer", cx, 380, COLORS.hero, 18, "center");
 }
@@ -49,7 +49,7 @@ export function drawSelect(r: Renderer, gold: number, castle: string, error: str
   r.text("2   -   ALLER CHEZ LE MARCHAND", cx, 285, COLORS.text, 22, "center");
   r.text("3   -   CHARGER UN CHATEAU", cx, 335, COLORS.text, 22, "center");
   r.text(`Bourse : ${gold} pièces d'or`, cx, 400, COLORS.treasure, 16, "center");
-  r.text(`Château : ${castle || "Ronceval (livré)"}`, cx, 428, COLORS.textDim, 14, "center");
+  r.text(`Château : ${castle || "L'Aigle d'Or (1984)"}`, cx, 428, COLORS.textDim, 14, "center");
   if (error) r.text(error, cx, 456, COLORS.healthFront, 14, "center");
 }
 

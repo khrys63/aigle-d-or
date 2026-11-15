@@ -1,9 +1,10 @@
 /**
  * Charger un château fabriqué dans l'éditeur (`dist/editor.html`).
  *
- * Le jeu embarque le château de Ronceval ; ce module est la SEULE porte d'entrée
- * d'un autre château, sous forme d'un fichier JSON que le joueur dépose depuis
- * l'écran de sélection (touche 3) ou en le glissant sur la fenêtre.
+ * Le jeu embarque le château de L'Aigle d'Or (`world/aigleDor.ts`, lu ici même) ;
+ * ce module est aussi la porte d'entrée de tout autre château, sous forme d'un
+ * fichier JSON que le joueur dépose depuis l'écran de sélection (touche 3) ou en
+ * le glissant sur la fenêtre.
  *
  * On n'y vérifie QUE ce qui empêcherait le jeu de démarrer : la validation des
  * règles du format (portes appariées, spawns, orientations, jouabilité) est le
@@ -27,13 +28,15 @@ export interface LoadedCastle {
 
 /** Analyse le contenu d'un fichier de château. `null` si ce n'en est pas un. */
 export function parseCastle(text: string): CastleDef | null {
-  let data: any;
   try {
-    data = JSON.parse(text);
+    return castleFromData(JSON.parse(text));
   } catch {
     return null;
   }
+}
 
+/** Même lecture, sur un objet déjà décodé (fichier importé dans le bundle). */
+export function castleFromData(data: any): CastleDef | null {
   const rooms = data?.rooms as Record<RoomId, RoomDef> | undefined;
   if (!rooms || typeof rooms !== "object") return null;
 
